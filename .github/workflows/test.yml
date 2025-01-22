@@ -129,6 +129,7 @@ jobs:
           mkdir -p apk/
           ls -al
           for file in `find ~ -name "*release*.apk" -print`; do
+            echo $file
             mv "$file" apk/TVBox_${{ matrix.userName }}_${{ env.tag }}.apk
           done
       - name: Release Note
